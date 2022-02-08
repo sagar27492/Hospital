@@ -9,9 +9,9 @@ pipeline {
         stage ('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/sagar27492/Hospital.git'
-                withMaven {
-                    sh "mvn clean install -DskipTests"
-                } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+		withMaven(maven : 'apache-maven-3.6.1') {
+			sh 'mvn install -DskipTests'
+		}
             } 
         }
         stage('unit test') {
