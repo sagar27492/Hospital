@@ -62,4 +62,3 @@ pipeline {
 
     // }
 }
-sagar.p.patil92@outlook.com
