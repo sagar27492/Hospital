@@ -9,9 +9,9 @@ pipeline {
         stage ('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/sagar27492/Hospital.git'
-		withMaven(maven : 'apache-maven-3.6.1') {
-			sh 'mvn install -DskipTests'
-		}
+		        withMaven(maven : 'apache-maven-3.6.1') {
+			        sh 'mvn install -DskipTests'
+		        }
             } 
         }
         stage('unit test') {
