@@ -6,22 +6,13 @@ pipeline {
     }
 
     stages {
-        stage('checkout') {
+        stage ('Build') {
             steps {
-                // Get some code from a GitHub repository
-                git 'https://github.com/sagar27492/Hospital.git'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh "mvn clean install -DskipTests"
-            }
-            post {
-                success {
-                    echo "Now archiving artifact"
-                    archiveArtifacts 'target/*.jar'
-                }
-            }
+                git url: 'https://github.com/sagar27492/Hospital.git'
+                withMaven {
+                    sh "mvn clean install -DskipTests"
+                } // withMaven will discover the generated Maven artifacts, JUnit Surefire & FailSafe reports and FindBugs reports
+            } 
         }
         stage('unit test') {
             steps {
@@ -62,4 +53,3 @@ pipeline {
 
     // }
 }
-sagar.p.patil92@outlook.com
