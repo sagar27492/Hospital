@@ -25,7 +25,9 @@ pipeline {
             }
         }
         stage('static code analysis'){
-            sh "mvn checkstyle:checkstyle"
+            steps {
+                sh "mvn checkstyle:checkstyle"
+            }
         }
     //     stage('CODE ANALYSIS with SONARQUBE') {
 	          
