@@ -1,0 +1,6 @@
+TimeStamp,Message Direction (IN/OUT),MessageType,ClOrdID,OrigClOrdID,OrderID,OrderType,Validity,Side,OrderQty,DisplayQty,OrderStatus,LimitPrice,ExecType,ExecutedQty,LeavesQty,ExecutedPrice,Message Interpretation
+2021-09-01 08:09:54.791338,OUT,D,A15ah14kqgndt,,,2,0,1,100,100,,157,,,,,Limit BUY DAY Order 100 @ 157
+2021-09-01 08:09:54.795726,IN,8,A15ah14kqgndt,,007FfbPBqIXt,,,1,,100,0,,0,0,100,0,Order ACK
+2021-09-01 08:10:07.749452,OUT,D,A15ah14kqgndv,,,2,0,2,50,50,,157,,,,,Limit SELL DAY Order 100 @ 157
+2021-09-01 08:10:07.758395,IN,8,A15ah14kqgndv,,007FfbPBqIXu,,,2,,0,2,,F,50,0,157,Order ACK Order Filled
+
